@@ -1,0 +1,11 @@
+# Elastic_Network_Interfaces
+ - An ENI is a logical component of a VPC that represents a network card
+ - Can have:
+    - primary private IPv4, one or more secondary IPv4
+    - one elastic IP (IPv4) per private IPv4
+    - one public IPv4
+    - multiple security groups
+    - a MAC address
+ - ENIs can be created seperately from instances and attached and moved between instances on the fly
+ - Bound to specific AZ
+ - eth0, the primary ENI, cannot be detached from instances and moved around

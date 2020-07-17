@@ -27,6 +27,7 @@
  ## EC2 Spot Instances
  - Up to _90% discount_ compared to On Demand pricing
  - Instances can be lost at any time if your max price is less than current spot price
+   - Essentially, instances can be lost to the _highest bidder_
  - Most _cost efficient_ of all instances
  - Useful for _low-priority_ and _resilient-to-failure_ workloads (ex. batch jobs, data analysis, img processing)
  - Popular combo: reserved instances for baseline, On-Demand + Spot for peak
@@ -42,3 +43,11 @@
  ## EC2 Dedicated Instances
  - Instaces running on _hardware that is dedicated to you_
  - _No control_ over instance placement
+
+ - EC2 instance type sorted by cost (Ascending):
+  1. Spot Instance
+  2. Reserved Instance
+  3. Reserved Dedicated Instance
+  4. Reserved Convertible Instance
+  5. Reserved Schedule Instance
+  6. On Demand Instance
