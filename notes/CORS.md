@@ -1,0 +1,13 @@
+# CORS
+ - Cross Origin Resource Sharing
+ - An origin is a scheme (protocol), host (domain), and port
+ - Web Browser based mechanism to allow requests to other origins while visiting the main origin
+ - Same Origin: http://example.com/app1 & http://example.com/app2
+ - Different Origin: http://www.example.com & http://other.example.com
+ - The requests won't be fulfilled unless the other origin allows for the requests, using CORS headers
+ - If a client does a cross-origin request on an S3 bucket, we need to enable the correct CORS headers
+ - You can allow for specific origins or * (all origins)
+ - Important headers:
+    - Access-Control-Allow-Origin (allowed domain(s))
+    - Access-Control-Allow-Methods (GET, PUSH, PUT, DELETE)
+ - 

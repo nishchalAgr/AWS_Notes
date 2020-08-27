@@ -1,0 +1,42 @@
+# S3_Storage_Tiers
+ - S3 Standard
+    - General Purpose
+    - High durability and availability
+ - S3 Standard-Infrequent Access (IA)
+    - Less frequent access
+    - rapid access when needed
+    - Low cost compared to standard
+ - S3 One Zone-IA
+    - Same as IA, but stored in one AZ
+    - Same high durability
+    - Low latency, high throughput
+    - 20% lower cost compared to IA
+ - S3 Intelligent Tiering
+    - Automatically moves objects between two access tiers based on changing access patterns
+    - Small monthly monitoring and auto-tiering fee
+    - Same low latency and high throughput as Standard
+    - High durability and availability
+ - Glacier
+    - Low cost object storage meant for archiving
+    - Long term data retention (10s of years)
+    - Alternative to on-premise magnetic tape storage
+    - Exteremly small cost per GB, plus retrieval cost
+    - Each "Archive", stored in "Vaults" can be up to 40TB in size
+    - 3 retrieval options:
+        - Expedited: 1 - 5 minutes
+        - Standard: 3 - 5 hours
+        - Bulk: 5 - 12 hours
+    - Min storage duration of 90 days
+ - Glacier Deep Archive
+    - Even cheaper
+    - 2 retrieval options:
+        - Standard - 12hrs
+        - Bulk - 48 hrs
+    - Min storage duration of 180 days
+
+## S3 Lifecycle Rules
+ - Allows for the automation of moving objects between S3 storage tiers
+ - Transition actions: it defines when objects are transitioned to another storage class 
+ - Expiration actions: configure objects to delete after some time
+    - Can be applied to old versions of objects
+ - Rules can be created for a certain prefix or object tags
